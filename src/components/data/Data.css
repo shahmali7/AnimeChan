@@ -1,0 +1,116 @@
+.Data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+    
+}
+.FormData{
+    display: flex;
+    gap: 10px;
+}
+.FormData > input {
+    height: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    border-top: none;
+}
+.FormData > button {
+    height: 30px;
+    text-align: center;
+    width: 50px;
+    background-color: rgb(13, 219, 13);
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.AllData{
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.AloneData{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+}
+.DataMain{
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+}
+.DataApi{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.Delete{
+    width: 70px;
+    height: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    background-color: red;
+}
+.EditButton{
+    width: 50px;
+    height: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10px;
+    background-color: aqua;
+}
+@media (max-width:762px){
+    .FormData{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 15px;
+    }
+    .AllData{
+        border: 1px solid black;
+        width: 90%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+    .DataMain{
+        border: 1px solid grey;
+        border-radius: 7px;
+        padding: 20px 0;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width:475px){
+    .FormData{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .AllData{
+        width: 100%;
+    }
+    .DataMain{
+        
+        padding: 20px 0;
+        
+    }
+}
