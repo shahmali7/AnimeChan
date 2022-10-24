@@ -1,4 +1,4 @@
-import DataList from "./components/dataList/dataList";
+import DataList from "./components/dataList/DataList";
 import './App.css'
 function App() {
   return (

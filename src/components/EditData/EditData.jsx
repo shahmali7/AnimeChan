@@ -1,10 +1,6 @@
 import React from 'react'
 import './EditData.css'
-const EditData = ({setOpenEdit,takeId,animeChan,EditableData,setEditableData,setanimeChan}) => {
-
-//  const editItem=animeChan.find((item)=>item.id===takeId)
- 
- 
+const EditData = ({setOpenEdit,takeId,animeChan,EditableData,setEditableData,setanimeChan}) => { 
 
   const handleEditData=(e)=>{
     const newEditData={...EditableData}
@@ -19,6 +15,7 @@ const EditData = ({setOpenEdit,takeId,animeChan,EditableData,setEditableData,set
     setOpenEdit(false)
     console.log(animeChan);
   }
+  
   return (
     <form onSubmit={(e)=>changeData(e)} className='Edit'>
        <input onChange={(e) => handleEditData(e)} placeholder='Edit Anime' id='anime' required maxLength={30} value={EditableData.anime}/>

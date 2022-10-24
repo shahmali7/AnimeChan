@@ -16,40 +16,43 @@ const Data = ({ animeChan, setanimeChan }) => {
         return 1
     })
 
-
+   console.log(sortData);
 
     const [Data, setData] = useState({
         anime: '',
         character: '',
         quote: '',
-        id: uuidv4()
+        id:''
     })
+    // console.log(Data);
+    
     const [EditableData,setEditableData]=useState({
         anime: '',
         character: '',
         quote: '',
-        id: uuidv4()
+
     })
 
     const addData = (e) => {
         e.preventDefault()
-        setanimeChan([...animeChan, Data])
+        setanimeChan([...animeChan,{...Data,id:uuidv4()}])
     }
 
 
     const handleData = (e) => {
         const newData = { ...Data }
         newData[e.target.id] = e.target.value
-        setData(newData)
+        setData({...newData})
         
     }
 
 
-    const DeleteItem=(Delete)=>{
+    const deleteItem=(Delete)=>{
       setanimeChan(animeChan.filter((item)=>item.id !== Delete))
       console.log(Delete);
     }
-    const EditDataItem=(id)=>{
+
+    const editDataItem=(id)=>{
         setOpenEdit(!OpenEdit)
         setTakeId(id)
         
@@ -90,8 +93,8 @@ const Data = ({ animeChan, setanimeChan }) => {
                                     <h3> Quote: {item.quote.length > 30 ? `${item.quote.substring(0,100)} ... ` : item.quote}</h3>
                                 </div>
                                 <div>
-                                    <button className='Delete' onClick={()=>DeleteItem(item.id)}>Delete</button>
-                                    <button className='EditButton' onClick={()=>EditDataItem(item.id)}>Edit</button>
+                                    <button className='Delete' onClick={()=>deleteItem(item.id)}>Delete</button>
+                                    <button className='EditButton' onClick={()=>editDataItem(item.id)}>Edit</button>
                                 </div>
                             </div>
                         )
